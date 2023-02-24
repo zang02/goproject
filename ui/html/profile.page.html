@@ -1,0 +1,27 @@
+{{template "base" .}}
+
+{{define "title"}}Edit profile{{end}}
+
+{{define "main"}}
+    <form action="/profile" method="POST">
+            <label for="edutProfile"><h3>Edit profile</h3></label>
+            <label for="email">email:</label>
+            <input type="email" name="email"> <br>
+        
+            <label for="name">name:</label>
+            <input type="text" name="name"> <br>
+        
+            <label for="login">login:</label>
+            <input type="text" name="login"> <br>
+        
+            <label for="password">password:</label>
+            <input type="password" name="password"> <br>
+            <br>
+            <button type="submit">submit</button>
+    </form>
+
+
+{{end}}
+
+
+

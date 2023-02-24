@@ -1,0 +1,30 @@
+{{template "base" .}}
+
+{{define "title"}}Ticket{{end}}
+
+{{define "main"}}
+        
+<form method="POST" action="/receipt">
+    <label for="products">Products:</label>
+        <div class="d-flex">
+            <div>
+                <h4>Bread</h4>
+                <p>Price: 100</p>
+                <input type="checkbox" name="products" value="bread.100" id="">
+            </div>
+            <div>
+                <h4>Milk</h4>
+                <p>Price: 200</p>
+                <input type="checkbox" name="products" value="milk.200" id="">
+            </div>
+            <div>
+                <h4>Cheese</h4>
+                <p>Price: 300</p>
+                <input type="checkbox" name="products" value="cheese.300" id="">
+            </div>
+        </div>
+    <input type="submit" value="Check out">
+</form>
+  
+
+{{end}}

@@ -1,0 +1,29 @@
+{{template "base" .}}
+
+{{define "title"}}Tickets{{end}}
+
+{{define "main"}}
+    <table class="table table-light table-hover">
+        <thead>
+          <tr>
+            <th scope="col"><a href="/receipt/1">ID</a></th>
+                <th scope="col">Total</th>
+                <th scope="col">User Login</th>
+                <th scope="col">CreatedAt</th>
+          </tr>
+        </thead>
+        <tbody>
+          {{ range .Tickets }}
+          <tr>
+            <th scope="row">{{ .Ticket.ID}}</th>
+            <td>{{ .Tickets.Total }}</td>
+            <td>{{ .Tickets.UserLogin }}</td>
+            <td>{{ .Tickets.CreatedAt }}</td>
+          </tr>
+          {{ end }}
+        </tbody>
+      </table>
+{{end}}
+
+        
+            
